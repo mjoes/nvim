@@ -1,8 +1,11 @@
 local o = vim.o
+local map = vim.api.nvim_set_keymap
+local options = { noremap = true, silent = true }
+
 require("config.lazy")
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here 
+  -- Replace the language servers listed here
   -- with the ones you want to install
   ensure_installed = {'lua_ls', 'gopls'},
   handlers = {
@@ -11,13 +14,15 @@ require('mason-lspconfig').setup({
     end,
   },
 })
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>t', ':rightbelow :vsplit | terminal<CR>', { noremap = true, silent = true })
+map('n', '<leader>e', ':NvimTreeToggle<CR>', options)
+map('i', 'jk', '<Esc>', options)
+map('n', '<C-h>', '<C-w>h', options)
+map('n', '<C-j>', '<C-w>j', options)
+map('n', '<C-k>', '<C-w>k', options)
+map('n', '<C-l>', '<C-w>l', options)
+map('n', '<leader>sw', ":%s/\\s\\+$//e<CR>", options)
+map('n', '<leader>t', ':rightbelow :vsplit | terminal<CR>', options)
+
 vim.cmd("colorscheme kanagawa")
 -- Indenting
 o.expandtab = true
