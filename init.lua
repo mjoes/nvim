@@ -5,8 +5,6 @@ local options = { noremap = true, silent = true }
 require("config.lazy")
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here
-  -- with the ones you want to install
   ensure_installed = {'lua_ls', 'gopls'},
   handlers = {
     function(server_name)
@@ -23,7 +21,15 @@ map('n', '<C-l>', '<C-w>l', options)
 map('n', '<leader>sw', ":%s/\\s\\+$//e<CR>", options)
 map('n', '<leader>t', ':rightbelow :vsplit | terminal<CR>', options)
 
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- or                              , branch = '0.1.x',
 vim.cmd("colorscheme kanagawa")
+
 -- Indenting
 o.expandtab = true
 o.shiftwidth = 2
