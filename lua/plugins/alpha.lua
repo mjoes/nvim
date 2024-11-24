@@ -5,7 +5,6 @@ return {
         local alpha = require'alpha'
         local startify = require'alpha.themes.startify'
 
-        -- Set custom header
         startify.section.header.val = {
           [[    __  ___           __                    __         ]],
           [[   /  |/  ____  _____/ /____  ____         / ____  ___ ]],
@@ -15,7 +14,6 @@ return {
           [[                                                       ]],
         }
 
-        -- Pass the modified config to alpha
         alpha.setup(startify.config)
     end
 }
