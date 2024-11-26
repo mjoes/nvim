@@ -15,5 +15,6 @@ map('n', 'gD:bnext<CR>', ':BufferLinePickClose<CR>', options)
 map('n', '<leader>x', ':bd<CR>', options)
 map('n', '<Tab>', ':bnext<CR>', options)
 map('n', '<S-Tab>', ':bprev<CR>', options)
+map('t', 'jk', '<C-\\><C-n>', options)
 
 print("Keybindings loaded!")
