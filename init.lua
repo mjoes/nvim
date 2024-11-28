@@ -1,5 +1,6 @@
 require("mappings")
 require("config.lazy")
+require('config.lspconfig')
 
 vim.opt.runtimepath:append("/home/mortenslingsby/.config/nvim/lua")
 vim.opt.termguicolors = true
@@ -7,18 +8,18 @@ vim.opt.hidden = true;
 vim.opt.number = true;
 vim.opt.relativenumber = true;
 vim.opt.clipboard = 'unnamedplus'
-vim.g.clipboard = {
-    name = "pbcopy",
-    copy = {
-        ["+"] = "pbcopy",
-        ["*"] = "pbcopy",
-    },
-    paste = {
-        ["+"] = "pbpaste",
-        ["*"] = "pbpaste",
-    },
-    cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+--     name = "pbcopy",
+--     copy = {
+--         ["+"] = "pbcopy",
+--         ["*"] = "pbcopy",
+--     },
+--     paste = {
+--         ["+"] = "pbpaste",
+--         ["*"] = "pbpaste",
+--     },
+--     cache_enabled = 0,
+-- }
 
 -- Indenting
 vim.o.expandtab = true
