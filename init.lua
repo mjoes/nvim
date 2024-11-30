@@ -2,7 +2,7 @@ require("mappings")
 require("config.lazy")
 require('config.lspconfig')
 
-vim.opt.runtimepath:append("/home/mortenslingsby/.config/nvim/lua")
+vim.opt.runtimepath:append("~/.config/nvim/lua")
 vim.opt.termguicolors = true
 vim.opt.hidden = true;
 vim.opt.number = true;

@@ -15,7 +15,8 @@ map('n', 'gD:bnext<CR>', ':BufferLinePickClose<CR>', options)
 map('n', '<leader>x', ':bd<CR>', options)
 map('n', '<Tab>', ':bnext<CR>', options)
 map('n', '<S-Tab>', ':bprev<CR>', options)
-map('t', 'jk', '<C-\\><C-n>', options)
+map('n', '<C-7>', 'gcc', { noremap = false, silent = true})
+map('t', '<Esc>', '<C-\\><C-n>', options)
 map('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', options)
 
 
