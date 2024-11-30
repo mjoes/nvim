@@ -37,3 +37,5 @@ lspconfig.ruff_lsp.setup({
   },
 })
 
+lspconfig.jedi_language_server.setup{}
+
