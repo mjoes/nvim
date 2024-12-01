@@ -28,3 +28,9 @@ vim.o.smartindent = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 
+-- Reload buffer if external change
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  command = "checktime",
+})
