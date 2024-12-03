@@ -16,7 +16,7 @@ map('n', '<leader>x', ':bd<CR>', options)
 map('n', '<Tab>', ':bnext<CR>', options)
 map('n', '<S-Tab>', ':bprev<CR>', options)
 map('n', '<C-7>', 'gcc', { noremap = false, silent = true})
-map('t', '<Esc>', '<C-\\><C-n>', options)
+map('t', '<leader>q', '<C-\\><C-n>', options)
 map('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', options)
 
 
