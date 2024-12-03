@@ -10,7 +10,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls', 'gopls', 'ruff', 'jedi_language_server' }, -- Specify servers to auto-install
+        ensure_installed = { 'lua_ls', 'gopls', 'ruff_lsp', 'jedi_language_server' }, -- Specify servers to auto-install
         handlers = {
           function(server_name)
             require('lspconfig')[server_name].setup({})

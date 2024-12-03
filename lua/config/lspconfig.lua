@@ -28,9 +28,11 @@ lspconfig.gopls.setup({
   },
 })
 
-lspconfig.ruff.setup({
+lspconfig.ruff_lsp.setup({
+  on_attach = default_on_attach,
   init_options = {
     settings = {
+      args = {}
     },
   },
 })
