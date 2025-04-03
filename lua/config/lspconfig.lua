@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local gopls_opts = require("config.gopls_config")
 
 local default_on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
@@ -17,7 +18,7 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.gopls.setup({
-  on_attach = default_on_attach,
+  on_attach = gopls_opts.on_attach,
   settings = {
     gopls = {
       analyses = {
