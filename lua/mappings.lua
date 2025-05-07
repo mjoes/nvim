@@ -20,5 +20,6 @@ map('v', '<C-7>', 'gc', { noremap = false, silent = true})
 map('t', '<C-q>', '<C-\\><C-n>', options)
 map('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', options)
 map('n', '<CR>', '<cmd>FineCmdline<CR>', options)
+map('n', '<leader>h', ':nohlsearch<CR>', options)
 
 print("Keybindings loaded!")
