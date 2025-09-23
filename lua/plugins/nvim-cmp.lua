@@ -124,7 +124,7 @@ return {
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['/'] = cmp.mapping.close(),
                     -- Overload tab to accept Copilot suggestions.
-                    [':'] = cmp.mapping(function(fallback)
+                    ['<C-.>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
                         else
@@ -140,7 +140,7 @@ return {
                     --     fallback()
                     --   end
                     -- end, { 'i', 's' }),
-                    [';'] = cmp.mapping(function(fallback)
+                    ['<C-,>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_prev_item()
                         else
